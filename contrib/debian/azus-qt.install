@@ -1,0 +1,6 @@
+usr/local/bin/azus-qt usr/bin
+share/pixmaps/azus32.xpm usr/share/pixmaps
+share/pixmaps/azus16.xpm usr/share/pixmaps
+share/pixmaps/azus128.png usr/share/pixmaps
+debian/azus-qt.desktop usr/share/applications
+debian/azus-qt.protocol usr/share/kde4/services/

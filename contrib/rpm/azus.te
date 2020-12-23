@@ -1,0 +1,81 @@
+policy_module(azus, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type azus_t;
+type azus_exec_t;
+init_daemon_domain(azus_t, azus_exec_t)
+
+permissive azus_t;
+
+type azus_initrc_exec_t;
+init_script_file(azus_initrc_exec_t)
+
+type azus_conf_t;
+files_type(azus_conf_t)
+
+type azus_var_lib_t;
+files_type(azus_var_lib_t)
+
+type azus_var_run_t;
+files_type(azus_var_run_t)
+
+type azus_port_t;
+corenet_port(azus_port_t)
+
+########################################
+#
+# azus local policy
+#
+allow azus_t self:process { fork };
+
+allow azus_t self:fifo_file rw_fifo_file_perms;
+allow azus_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(azus_t, azus_conf_t, azus_conf_t)
+manage_files_pattern(azus_t, azus_conf_t, azus_conf_t)
+
+manage_dirs_pattern(azus_t, azus_var_lib_t, azus_var_lib_t)
+manage_files_pattern(azus_t, azus_var_lib_t, azus_var_lib_t)
+files_var_lib_filetrans(azus_t, azus_var_lib_t, { dir file })
+
+manage_dirs_pattern(azus_t, azus_var_run_t, azus_var_run_t)
+manage_files_pattern(azus_t, azus_var_run_t, azus_var_run_t)
+
+sysnet_dns_name_resolve(azus_t)
+corenet_all_recvfrom_unlabeled(azus_t)
+
+allow azus_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(azus_t)
+corenet_tcp_sendrecv_generic_node(azus_t)
+corenet_tcp_sendrecv_all_ports(azus_t)
+corenet_tcp_bind_generic_node(azus_t)
+
+gen_require(`
+    type azus_port_t;
+')
+allow azus_t azus_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type azus_port_t;
+')
+allow azus_t azus_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(azus_t)
+
+files_read_etc_files(azus_t)
+
+miscfiles_read_localization(azus_t)
+
+sysnet_dns_name_resolve(azus_t)
+
+allow azus_t azus_exec_t:file execute_no_trans;
+allow azus_t self:process setsched;
+corecmd_exec_ls(azus_t)
+corenet_tcp_connect_http_port(azus_t)
+dev_read_urand(azus_t)
+fs_getattr_xattr_fs(azus_t)
+kernel_read_system_state(azus_t)

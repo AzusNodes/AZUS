@@ -1,0 +1,8 @@
+/usr/bin/azus-cli		--	gen_context(system_u:object_r:azus_exec_t,s0)
+/usr/sbin/azusd		--	gen_context(system_u:object_r:azus_exec_t,s0)
+/usr/lib(64)?/azus/azusd		--	gen_context(system_u:object_r:azus_exec_t,s0)
+
+/etc/azus(/.*)?		gen_context(system_u:object_r:azus_conf_t,s0)
+/var/lib/azus(/.*)?		gen_context(system_u:object_r:azus_var_lib_t,s0)
+
+(/var)?/run/azusd(/.*)?   gen_context(system_u:object_r:azus_var_run_t,s0)

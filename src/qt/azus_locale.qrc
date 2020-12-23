@@ -1,0 +1,18 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="de">locale/azus_de.qm</file>
+        <file alias="en">locale/azus_en.qm</file>
+        <file alias="en_US">locale/azus_en_US.qm</file>
+        <file alias="es">locale/azus_es.qm</file>
+        <file alias="es_ES">locale/azus_es_ES.qm</file>
+        <file alias="fr_FR">locale/azus_fr_FR.qm</file>
+        <file alias="hr_HR">locale/azus_hr_HR.qm</file>
+        <file alias="it">locale/azus_it.qm</file>
+        <file alias="ko_KR">locale/azus_ko_KR.qm</file>
+        <file alias="nl">locale/azus_nl.qm</file>
+        <file alias="pl">locale/azus_pl.qm</file>
+        <file alias="ru">locale/azus_ru.qm</file>
+        <file alias="tr">locale/azus_tr.qm</file>
+        <file alias="zh_CN">locale/azus_zh_CN.qm</file>
+    </qresource>
+</RCC>

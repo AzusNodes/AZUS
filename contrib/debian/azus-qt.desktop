@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=AZUS Core
+Comment=AZUS P2P Cryptocurrency
+Comment[fr]=AZUS, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=AZUS, eşten eşe kriptografik sanal para birimi
+Exec=azus-qt %u
+Terminal=false
+Type=Application
+Icon=azus128
+MimeType=x-scheme-handler/azus;
+Categories=Office;Finance;
+StartupWMClass=Azus-qt

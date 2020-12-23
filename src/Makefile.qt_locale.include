@@ -1,0 +1,15 @@
+QT_TS = \
+  qt/locale/azus_de.ts \
+  qt/locale/azus_en.ts \
+  qt/locale/azus_en_US.ts \
+  qt/locale/azus_es.ts \
+  qt/locale/azus_es_ES.ts \
+  qt/locale/azus_fr_FR.ts \
+  qt/locale/azus_hr_HR.ts \
+  qt/locale/azus_it.ts \
+  qt/locale/azus_ko_KR.ts \
+  qt/locale/azus_nl.ts \
+  qt/locale/azus_pl.ts \
+  qt/locale/azus_ru.ts \
+  qt/locale/azus_tr.ts \
+  qt/locale/azus_zh_CN.ts
