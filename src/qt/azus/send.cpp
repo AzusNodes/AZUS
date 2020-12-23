@@ -55,6 +55,7 @@ SendWidget::SendWidget(AZUSGUI* parent) :
     setCssProperty(ui->pushButtonAddRecipient, "btn-secundary-add");
     setCssBtnPrimary(ui->pushButtonSave);
     setCssBtnSecondary(ui->pushButtonReset);
+    ui->pushButtonClear->setVisible(false);
 
     // Coin control
     ui->btnCoinControl->setTitleClassAndText("btn-title-grey", tr("Coin Control"));

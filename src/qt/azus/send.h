@@ -17,7 +17,7 @@
 #include "coincontroldialog.h"
 #include "qt/azus/tooltipmenu.h"
 
-static const int MAX_SEND_POPUP_ENTRIES = 8;
+static const int MAX_SEND_POPUP_ENTRIES = 80;
 
 class AZUSGUI;
 class ClientModel;
