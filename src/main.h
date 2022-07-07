@@ -269,10 +269,16 @@ int GetIXConfirmations(uint256 nTXHash);
 inline int64_t GetMasterNodeCollateral(int nHeight){
     // Mainnet/Testnet block reward reduction schedule
     const int nLast = 1500000;
-    if (nHeight > nLast)   return 350;
-    if (nHeight > 1000000) return 300;
-    if (nHeight > 900000)  return 275;
-    if (nHeight > 800000)  return 260;
+    if (nHeight > nLast)   return 15000;
+    if (nHeight > 1400000) return 12500;
+    if (nHeight > 1300000) return 10000;
+    if (nHeight > 1200000) return 9000;
+    if (nHeight > 1100000) return 8000;
+    if (nHeight > 1000000) return 7000;
+    if (nHeight > 950000)  return 6000;
+    if (nHeight > 900000)  return 5000;
+    if (nHeight > 850000)  return 4000;	
+    if (nHeight > 800000)  return 3000;
     if (nHeight > 700000)  return 245;
     if (nHeight > 600000)  return 230;
     if (nHeight > 500000)  return 215;
