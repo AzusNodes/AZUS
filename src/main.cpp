@@ -1517,7 +1517,8 @@ CAmount GetBlockValue(int nHeight)
     if (nHeight > 950000)  return 13   * COIN;
     if (nHeight > 900000)  return 11   * COIN;
     if (nHeight > 850000)  return 9   * COIN;
-    if (nHeight > 800000)  return 7   * COIN;
+    if (nHeight > 816000)  return 7   * COIN;
+    if (nHeight > 800000)  return 0.9   * COIN;
     if (nHeight > 700000)  return 0.85  * COIN;
     if (nHeight > 600000)  return 0.8   * COIN;
     if (nHeight > 500000)  return 0.75  * COIN;
