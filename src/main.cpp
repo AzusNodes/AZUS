@@ -1508,16 +1508,15 @@ CAmount GetBlockValue(int nHeight)
     // Testnet high-inflation blocks [2, 200] with value 250k AZU
     // Mainnet/Testnet block reward reduction schedule
     const int nLast = 1500000;
-    if (nHeight > nLast)   return 30   * COIN;
-    if (nHeight > 1400000) return 25  * COIN;
-    if (nHeight > 1300000) return 21  * COIN;
-    if (nHeight > 1200000) return 19   * COIN;
-    if (nHeight > 1100000) return 17   * COIN;
-    if (nHeight > 1000000) return 15   * COIN;
-    if (nHeight > 950000)  return 13   * COIN;
-    if (nHeight > 900000)  return 11   * COIN;
-    if (nHeight > 850000)  return 9   * COIN;
-    if (nHeight > 825000)  return 7   * COIN;
+    if (nHeight > nLast)   return 25   * COIN;
+    if (nHeight > 1400000) return 21  * COIN;
+    if (nHeight > 1300000) return 19  * COIN;
+    if (nHeight > 1200000) return 17   * COIN;
+    if (nHeight > 1100000) return 15   * COIN;
+    if (nHeight > 1000000) return 13   * COIN;
+    if (nHeight > 950000)  return 11   * COIN;
+    if (nHeight > 900000)  return 9   * COIN;
+    if (nHeight > 850000)  return 7   * COIN;
     if (nHeight > 800000)  return 0.9   * COIN;
     if (nHeight > 700000)  return 0.85  * COIN;
     if (nHeight > 600000)  return 0.8   * COIN;
